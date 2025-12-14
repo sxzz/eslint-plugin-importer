@@ -4,6 +4,7 @@ import first from './rules/first'
 import importDedupe from './rules/import-dedupe'
 import newlineAfterImport from './rules/newline-after-import'
 import noDefaultExport from './rules/no-default-export'
+import noDuplicates from './rules/no-duplicates'
 import noMutableExports from './rules/no-mutable-exports'
 import noNamedDefault from './rules/no-named-default'
 import type { ESLint } from 'eslint'
@@ -19,6 +20,7 @@ export const plugin = {
     'import-dedupe': importDedupe,
     'newline-after-import': newlineAfterImport,
     'no-default-export': noDefaultExport,
+    'no-duplicates': noDuplicates,
     'no-mutable-exports': noMutableExports,
     'no-named-default': noNamedDefault,
     first,

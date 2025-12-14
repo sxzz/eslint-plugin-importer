@@ -35,6 +35,11 @@ export interface RuleOptions {
    */
   'import/no-default-export'?: Linter.RuleEntry<[]>
   /**
+   * Forbid repeated import of the same module in multiple places.
+   * @see https://github.com/sxzz/eslint-plugin-ii/blob/main/src/rules/no-duplicates.test.ts
+   */
+  'import/no-duplicates'?: Linter.RuleEntry<ImportNoDuplicates>
+  /**
    * Forbid the use of mutable exports with `var` or `let`.
    * @see https://github.com/sxzz/eslint-plugin-ii/blob/main/src/rules/no-mutable-exports.test.ts
    */
@@ -56,4 +61,9 @@ type ImportNewlineAfterImport = []|[{
   count?: number
   exactCount?: boolean
   considerComments?: boolean
+}]
+// ----- import/no-duplicates -----
+type ImportNoDuplicates = []|[{
+  considerQueryString?: boolean
+  "prefer-inline"?: boolean
 }]

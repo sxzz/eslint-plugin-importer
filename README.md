@@ -15,12 +15,13 @@ npm i eslint-plugin-importer
 ### Available Rules
 
 - `consistent-type-specifier-style`
-- `first`
 - `import-dedupe`
 - `newline-after-import`
 - `no-default-export`
+- `no-duplicates`
 - `no-mutable-exports`
 - `no-named-default`
+- `first`
 
 ## Sponsors
 
