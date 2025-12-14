@@ -53,12 +53,12 @@
     "eslint": "^9.0.0"
   },
   "devDependencies": {
-    "@sxzz/eslint-config": "^7.4.1",
+    "@sxzz/eslint-config": "^7.4.3",
     "@sxzz/prettier-config": "^2.2.6",
     "@types/node": "^25.0.2",
     "@typescript-eslint/parser": "^8.49.0",
     "@typescript-eslint/utils": "^8.49.0",
-    "@typescript/native-preview": "7.0.0-dev.20251213.1",
+    "@typescript/native-preview": "7.0.0-dev.20251214.1",
     "bumpp": "^10.3.2",
     "eslint": "^9.39.2",
     "eslint-typegen": "^2.3.0",
