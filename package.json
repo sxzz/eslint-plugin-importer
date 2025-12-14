@@ -1,0 +1,65 @@
+{
+  "name": "eslint-plugin-importer",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.25.0",
+  "description": "Import with sanity.",
+  "author": "Kevin Deng <sxzz@sxzz.moe>",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/sxzz",
+  "homepage": "https://github.com/sxzz/eslint-plugin-importer#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sxzz/eslint-plugin-importer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sxzz/eslint-plugin-importer/issues"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "lint": "eslint --cache .",
+    "lint:fix": "pnpm run lint --fix",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "test": "vitest",
+    "typecheck": "tsgo --noEmit",
+    "format": "prettier --cache --write .",
+    "release": "bumpp",
+    "prepublishOnly": "pnpm run build"
+  },
+  "peerDependencies": {
+    "eslint": "^9.0.0"
+  },
+  "devDependencies": {
+    "@sxzz/eslint-config": "^7.4.1",
+    "@sxzz/prettier-config": "^2.2.6",
+    "@types/node": "^25.0.2",
+    "@typescript-eslint/parser": "^8.49.0",
+    "@typescript-eslint/utils": "^8.49.0",
+    "@typescript/native-preview": "7.0.0-dev.20251213.1",
+    "bumpp": "^10.3.2",
+    "eslint": "^9.39.2",
+    "eslint-typegen": "^2.3.0",
+    "eslint-vitest-rule-tester": "^3.0.1",
+    "prettier": "^3.7.4",
+    "tsdown": "^0.17.4",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.15"
+  },
+  "prettier": "@sxzz/prettier-config"
+}
