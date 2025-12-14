@@ -8,7 +8,8 @@ import type { RuleContext } from '@typescript-eslint/utils/ts-eslint'
 import type { Rule } from 'eslint'
 
 // @keep-sorted
-const hasDocs = new Set(['prefer-string-function'])
+// eslint-disable-next-line unicorn/no-useless-collection-argument
+const hasDocs = new Set<string>([])
 
 const blobUrl = 'https://github.com/sxzz/eslint-plugin-ii/blob/main/src/rules/'
 
