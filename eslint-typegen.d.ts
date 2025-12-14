@@ -10,10 +10,25 @@ declare module 'eslint' {
 
 export interface RuleOptions {
   /**
+   * Enforce or ban the use of inline type-only markers for named imports.
+   * @see https://github.com/sxzz/eslint-plugin-ii/blob/main/src/rules/consistent-type-specifier-style.test.ts
+   */
+  'import/consistent-type-specifier-style'?: Linter.RuleEntry<ImportConsistentTypeSpecifierStyle>
+  /**
    * Ensure all imports appear before other statements.
    * @see https://github.com/sxzz/eslint-plugin-ii/blob/main/src/rules/first.test.ts
    */
   'import/first'?: Linter.RuleEntry<ImportFirst>
+  /**
+   * Fix duplication in imports
+   * @see https://github.com/sxzz/eslint-plugin-ii/blob/main/src/rules/import-dedupe.test.ts
+   */
+  'import/import-dedupe'?: Linter.RuleEntry<[]>
+  /**
+   * Enforce a newline after import statements.
+   * @see https://github.com/sxzz/eslint-plugin-ii/blob/main/src/rules/newline-after-import.test.ts
+   */
+  'import/newline-after-import'?: Linter.RuleEntry<ImportNewlineAfterImport>
   /**
    * Forbid default exports.
    * @see https://github.com/sxzz/eslint-plugin-ii/blob/main/src/rules/no-default-export.test.ts
@@ -32,5 +47,13 @@ export interface RuleOptions {
 }
 
 /* ======= Declarations ======= */
+// ----- import/consistent-type-specifier-style -----
+type ImportConsistentTypeSpecifierStyle = []|[("prefer-top-level" | "prefer-inline")]
 // ----- import/first -----
 type ImportFirst = []|[("absolute-first" | "disable-absolute-first")]
+// ----- import/newline-after-import -----
+type ImportNewlineAfterImport = []|[{
+  count?: number
+  exactCount?: boolean
+  considerComments?: boolean
+}]
