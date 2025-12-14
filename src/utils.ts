@@ -11,7 +11,8 @@ import type { Rule } from 'eslint'
 // eslint-disable-next-line unicorn/no-useless-collection-argument
 const hasDocs = new Set<string>([])
 
-const blobUrl = 'https://github.com/sxzz/eslint-plugin-ii/blob/main/src/rules/'
+const blobUrl =
+  'https://github.com/sxzz/eslint-plugin-importer/blob/main/src/rules/'
 
 export interface RuleModule<T extends readonly unknown[]>
   extends Rule.RuleModule {

@@ -11,7 +11,7 @@ import type { ESLint } from 'eslint'
 
 export const plugin = {
   meta: {
-    name: 'eslint-plugin-ii',
+    name: 'eslint-plugin-importer',
     version,
   },
   // @keep-sorted
