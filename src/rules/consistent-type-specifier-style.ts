@@ -121,8 +121,6 @@ export default createEslintRule<Options, MessageId>({
         if (
           // already top-level is valid
           node.importKind === 'type' ||
-          // @ts-expect-error - flow type
-          node.importKind === 'typeof' ||
           // no specifiers (import {} from '') cannot have inline - so is valid
           node.specifiers.length === 0 ||
           (node.specifiers.length === 1 &&
@@ -152,11 +150,6 @@ export default createEslintRule<Options, MessageId>({
 
           if (specifier.importKind === 'type') {
             typeSpecifiers.push(specifier)
-          } else if (
-            // @ts-expect-error - flow type
-            specifier.importKind === 'typeof'
-          ) {
-            typeofSpecifiers.push(specifier)
           } else if (
             specifier.importKind === 'value' ||
             specifier.importKind == null
