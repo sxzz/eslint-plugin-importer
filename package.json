@@ -15,6 +15,12 @@
   "bugs": {
     "url": "https://github.com/sxzz/eslint-plugin-importer/issues"
   },
+  "keywords": [
+    "eslint",
+    "plugin",
+    "import"
+  ],
+  "sideEffects": false,
   "exports": {
     ".": "./dist/index.js",
     "./package.json": "./package.json"

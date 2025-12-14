@@ -20,11 +20,6 @@ export interface RuleOptions {
    */
   'import/first'?: Linter.RuleEntry<ImportFirst>
   /**
-   * Fix duplication in imports
-   * @see https://github.com/sxzz/eslint-plugin-importer/blob/main/src/rules/import-dedupe.test.ts
-   */
-  'import/import-dedupe'?: Linter.RuleEntry<[]>
-  /**
    * Enforce a newline after import statements.
    * @see https://github.com/sxzz/eslint-plugin-importer/blob/main/src/rules/newline-after-import.test.ts
    */
@@ -39,6 +34,11 @@ export interface RuleOptions {
    * @see https://github.com/sxzz/eslint-plugin-importer/blob/main/src/rules/no-duplicates.test.ts
    */
   'import/no-duplicates'?: Linter.RuleEntry<ImportNoDuplicates>
+  /**
+   * Fix duplication in imports
+   * @see https://github.com/sxzz/eslint-plugin-importer/blob/main/src/rules/import-dedupe.test.ts
+   */
+  'import/no-duplicates-specifier'?: Linter.RuleEntry<[]>
   /**
    * Forbid the use of mutable exports with `var` or `let`.
    * @see https://github.com/sxzz/eslint-plugin-importer/blob/main/src/rules/no-mutable-exports.test.ts
