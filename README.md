@@ -15,10 +15,10 @@ npm i eslint-plugin-importer
 ### Available Rules
 
 - `consistent-type-specifier-style`
-- `import-dedupe`
 - `newline-after-import`
 - `no-default-export`
 - `no-duplicates`
+- `no-duplicates-specifier`
 - `no-mutable-exports`
 - `no-named-default`
 - `first`
