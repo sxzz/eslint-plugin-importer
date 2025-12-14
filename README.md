@@ -4,7 +4,7 @@
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![Unit Test][unit-test-src]][unit-test-href]
 
-A subset of ESLint plugin of [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import).
+An ESLint plugin that is a subset of [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import).
 
 ## Install
 

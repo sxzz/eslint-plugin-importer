@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "packageManager": "pnpm@10.25.0",
-  "description": "Import with sanity.",
+  "description": "An ESLint plugin that is a subset of eslint-plugin-import.",
   "author": "Kevin Deng <sxzz@sxzz.moe>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/sxzz",
