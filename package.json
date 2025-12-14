@@ -23,7 +23,8 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "eslint-typegen.d.ts"
   ],
   "publishConfig": {
     "access": "public"
@@ -34,7 +35,7 @@
   "scripts": {
     "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",
-    "build": "tsdown",
+    "build": "tsx scripts/typegen.ts && tsdown",
     "dev": "tsdown --watch",
     "test": "vitest",
     "typecheck": "tsgo --noEmit",
@@ -58,6 +59,7 @@
     "eslint-vitest-rule-tester": "^3.0.1",
     "prettier": "^3.7.4",
     "tsdown": "^0.17.4",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "vitest": "^4.0.15"
   },

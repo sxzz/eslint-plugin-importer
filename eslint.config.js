@@ -7,4 +7,7 @@ export default sxzz(
       'import/no-default-export': 'off',
     },
   },
+  {
+    ignores: ['eslint-typegen.d.ts'],
+  },
 )

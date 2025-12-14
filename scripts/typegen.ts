@@ -3,7 +3,7 @@ import { pluginsToRulesDTS } from 'eslint-typegen/core'
 import plugin from '../src/index'
 
 const dts = await pluginsToRulesDTS({
-  sxzz: plugin,
+  import: plugin,
 })
 
 await fs.writeFile('eslint-typegen.d.ts', dts)
