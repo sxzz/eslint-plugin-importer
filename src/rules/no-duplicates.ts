@@ -5,7 +5,7 @@ import type { RuleContext } from '@typescript-eslint/utils/ts-eslint'
 export type Options = [
   {
     considerQueryString?: boolean
-    'prefer-inline'?: boolean
+    preferInline?: boolean
   }?,
 ]
 
@@ -114,7 +114,7 @@ function getFix(
   }
 
   // pre-caculate preferInline before actual fix function
-  const preferInline = context.options[0] && context.options[0]['prefer-inline']
+  const preferInline = context.options[0] && context.options[0].preferInline
 
   return (fixer: TSESLint.RuleFixer) => {
     const tokens = sourceCode.getTokens(first)
@@ -388,7 +388,7 @@ export default createEslintRule<Options, MessageId>({
           considerQueryString: {
             type: 'boolean',
           },
-          'prefer-inline': {
+          preferInline: {
             type: 'boolean',
           },
         },
@@ -401,7 +401,7 @@ export default createEslintRule<Options, MessageId>({
   },
   defaultOptions: [],
   create(context) {
-    const preferInline = context.options[0]?.['prefer-inline']
+    const preferInline = context.options[0]?.preferInline
 
     const moduleMaps = new Map<TSESTree.Node, ModuleMap>()
     function getImportMap(n: TSESTree.ImportDeclaration) {
