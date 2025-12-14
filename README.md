@@ -4,13 +4,23 @@
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![Unit Test][unit-test-src]][unit-test-href]
 
-An ESLint plugin that is a subset of [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import).
+An ESLint plugin that is a subset of [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import) and [eslint-plugin-antfu](https://github.com/antfu/eslint-plugin-antfu)
 
 ## Install
 
 ```bash
 npm i eslint-plugin-importer
 ```
+
+### Available Rules
+
+- `consistent-type-specifier-style`
+- `first`
+- `import-dedupe`
+- `newline-after-import`
+- `no-default-export`
+- `no-mutable-exports`
+- `no-named-default`
 
 ## Sponsors
 
