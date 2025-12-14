@@ -4,7 +4,12 @@
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![Unit Test][unit-test-src]][unit-test-href]
 
-An ESLint plugin that is a subset of [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import) and [eslint-plugin-antfu](https://github.com/antfu/eslint-plugin-antfu)
+An ESLint plugin that is a subset of [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import) / [eslint-plugin-import-x](https://github.com/un-ts/eslint-plugin-import-x) and [eslint-plugin-antfu](https://github.com/antfu/eslint-plugin-antfu)
+
+## Features
+
+- Zero dependencies
+- No module resolution, only focuses on import/export syntax
 
 ## Install
 
@@ -22,6 +27,8 @@ npm i eslint-plugin-importer
 - `no-mutable-exports`
 - `no-named-default`
 - `first`
+
+Documentation is WIP, please refer to [eslint-plugin-import-x](https://github.com/un-ts/eslint-plugin-import-x).
 
 ## Sponsors
 
