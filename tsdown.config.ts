@@ -1,9 +1,16 @@
-import { defineConfig } from 'tsdown'
+import { lib } from 'tsdown-preset-sxzz'
 
-export default defineConfig({
-  platform: 'neutral',
-  dts: {
-    tsgo: true,
+export default lib(
+  {},
+  {
+    dts: { tsgo: true },
+    external: [
+      // removed after tree-shaking
+      /@typescript-eslint\//,
+      'typescript',
+    ],
+    treeshake: {
+      moduleSideEffects: false,
+    },
   },
-  exports: true,
-})
+)

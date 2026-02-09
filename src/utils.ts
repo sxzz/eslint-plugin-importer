@@ -72,14 +72,14 @@ function createRule<
       const optionsWithDefault = context.options.map((options, index) => {
         return {
           // eslint-disable-next-line unicorn/no-useless-fallback-in-spread
-          ...(defaultOptions[index] || {}),
+          ...(defaultOptions?.[index] || {}),
           // eslint-disable-next-line unicorn/no-useless-fallback-in-spread
           ...(options || {}),
         }
       }) as unknown as TOptions
       return create(context, optionsWithDefault)
     }) as any,
-    defaultOptions,
+    defaultOptions: defaultOptions || ({} as TOptions),
     meta: meta as any,
   }
 }
@@ -105,7 +105,9 @@ export function warnOnce(message: string): void {
 export function sourceType<
   MessageIds extends string,
   Options extends readonly unknown[],
->(context: TSESLint.RuleContext<MessageIds, Options>) {
+>(
+  context: TSESLint.RuleContext<MessageIds, Options>,
+): 'commonjs' | 'module' | 'script' | undefined {
   if ('sourceType' in context.parserOptions) {
     return context.parserOptions.sourceType
   }
@@ -114,7 +116,9 @@ export function sourceType<
   }
 }
 
-export function getValue(node: TSESTree.Identifier | TSESTree.StringLiteral) {
+export function getValue(
+  node: TSESTree.Identifier | TSESTree.StringLiteral,
+): string {
   switch (node.type) {
     case 'Identifier': {
       return node.name
