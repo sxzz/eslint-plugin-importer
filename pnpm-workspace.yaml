@@ -1,8 +1,9 @@
 packages: []
 
-ignoredBuiltDependencies:
-  - esbuild
+overrides:
+  eslint-plugin-importer: workspace:*
+
+allowBuilds:
+  esbuild: false
 
 trustPolicy: no-downgrade
-trustPolicyExclude:
-  - chokidar@4.0.3

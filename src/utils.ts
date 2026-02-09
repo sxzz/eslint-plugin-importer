@@ -16,7 +16,7 @@ const blobUrl =
 
 export interface RuleModule<T extends readonly unknown[]>
   extends Rule.RuleModule {
-  defaultOptions: T
+  defaultOptions?: T
 }
 
 /**
@@ -79,7 +79,7 @@ function createRule<
       }) as unknown as TOptions
       return create(context, optionsWithDefault)
     }) as any,
-    defaultOptions: defaultOptions || ({} as TOptions),
+    defaultOptions,
     meta: meta as any,
   }
 }
@@ -108,7 +108,7 @@ export function sourceType<
 >(
   context: TSESLint.RuleContext<MessageIds, Options>,
 ): 'commonjs' | 'module' | 'script' | undefined {
-  if ('sourceType' in context.parserOptions) {
+  if (context.parserOptions && 'sourceType' in context.parserOptions) {
     return context.parserOptions.sourceType
   }
   if ('languageOptions' in context && context.languageOptions) {
