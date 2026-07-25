@@ -4,8 +4,8 @@ import {
   type ValidTestCase,
 } from 'eslint-vitest-rule-tester'
 import { expect } from 'vitest'
-import { run } from './_test'
-import rule, { RULE_NAME } from './first'
+import { run } from './_test.ts'
+import rule, { RULE_NAME } from './first.ts'
 
 const valids: ValidTestCase[] = [
   {
@@ -46,10 +46,9 @@ run({
   rule,
 
   valid: valids,
-  invalid: invalid.map(
-    (i): InvalidTestCase =>
-      typeof i === 'string'
-        ? { code: i, output: (o) => expect(o).toMatchSnapshot() }
-        : i,
+  invalid: invalid.map((i): InvalidTestCase =>
+    typeof i === 'string'
+      ? { code: i, output: (o) => expect(o).toMatchSnapshot() }
+      : i,
   ),
 })

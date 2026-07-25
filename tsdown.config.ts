@@ -4,11 +4,14 @@ export default lib(
   {},
   {
     dts: { tsgo: true },
-    external: [
-      // removed after tree-shaking
-      /@typescript-eslint\//,
-      'typescript',
-    ],
+    deps: {
+      neverBundle: [
+        // removed after tree-shaking
+        /@typescript-eslint\//,
+        'typescript',
+      ],
+      onlyImport: ['eslint'],
+    },
     treeshake: {
       moduleSideEffects: false,
     },

@@ -1,4 +1,4 @@
-import { createEslintRule, getValue } from '../utils'
+import { createEslintRule, getValue } from '../utils.ts'
 
 export type Options = []
 type MessageId = 'default'

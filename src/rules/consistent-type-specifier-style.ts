@@ -1,4 +1,4 @@
-import { createEslintRule, getValue } from '../utils'
+import { createEslintRule, getValue } from '../utils.ts'
 import type { TSESLint, TSESTree } from '@typescript-eslint/utils'
 
 function isComma(token: TSESTree.Token): token is TSESTree.PunctuatorToken {
@@ -27,11 +27,11 @@ function getImportText(
   specifiers: TSESTree.ImportSpecifier[],
   kind: 'type' | 'typeof',
 ) {
-  const sourceString = sourceCode.getText(node.source)
   if (specifiers.length === 0) {
     return ''
   }
 
+  const sourceString = sourceCode.getText(node.source)
   const names = specifiers.map((s) => {
     const importedName = getValue(s.imported)
     if (importedName === s.local.name) {

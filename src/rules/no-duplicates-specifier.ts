@@ -1,4 +1,4 @@
-import { createEslintRule } from '../utils'
+import { createEslintRule } from '../utils.ts'
 
 export const RULE_NAME = 'import-dedupe'
 export type MessageIds = 'importDedupe'

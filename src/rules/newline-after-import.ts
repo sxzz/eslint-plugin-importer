@@ -1,6 +1,6 @@
 /** Rule to enforce new line after import not followed by another import. */
 
-import { createEslintRule } from '../utils'
+import { createEslintRule } from '../utils.ts'
 import type { TSESTree } from '@typescript-eslint/utils'
 
 function getLineDifference(

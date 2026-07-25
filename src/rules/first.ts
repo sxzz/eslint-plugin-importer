@@ -1,4 +1,4 @@
-import { createEslintRule } from '../utils'
+import { createEslintRule } from '../utils.ts'
 import type { TSESLint, TSESTree } from '@typescript-eslint/utils'
 
 export const RULE_NAME = 'first'

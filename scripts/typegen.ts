@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises'
 import { pluginsToRulesDTS } from 'eslint-typegen/core'
-import plugin from '../src/index'
+import plugin from '../src/index.ts'
 
 const dts = await pluginsToRulesDTS({
   import: plugin,

@@ -1,4 +1,4 @@
-import { createEslintRule, getValue, sourceType } from '../utils.js'
+import { createEslintRule, getValue, sourceType } from '../utils.ts'
 
 export const RULE_NAME = 'no-default-export'
 export type Options = []

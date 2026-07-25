@@ -1,4 +1,4 @@
-import { createEslintRule } from '../utils'
+import { createEslintRule } from '../utils.ts'
 import type { TSESLint, TSESTree } from '@typescript-eslint/utils'
 import type { RuleContext } from '@typescript-eslint/utils/ts-eslint'
 
@@ -101,7 +101,7 @@ function getFix(
   const unnecessaryImports = restWithoutCommentsAndNamespaces.filter(
     (node, nodeIndex) =>
       !restWithoutCommentsAndNamespacesHasSpecifiers[nodeIndex] &&
-      !specifiers.some((specifier) => specifier.importNode === node),
+      specifiers.every((specifier) => specifier.importNode !== node),
   )
 
   const shouldAddSpecifiers = specifiers.length > 0
@@ -133,7 +133,7 @@ function getFix(
           sourceCode.text
             .slice(openBrace.range[1], closeBrace.range[0])
             .split(',')
-            .map((x) => x.split(' as ')[0].trim()),
+            .map((x) => x.split(' as ', 1)[0].trim()),
         )
 
     const [specifiersText] = specifiers.reduce(
