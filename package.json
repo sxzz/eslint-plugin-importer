@@ -2,7 +2,7 @@
   "name": "eslint-plugin-importer",
   "type": "module",
   "version": "0.3.0",
-  "packageManager": "pnpm@10.29.2",
+  "packageManager": "pnpm@11.17.0",
   "description": "An ESLint plugin that is a subset of eslint-plugin-import.",
   "author": "Kevin Deng <sxzz@sxzz.moe>",
   "license": "MIT",
@@ -39,7 +39,7 @@
   "scripts": {
     "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",
-    "build": "tsx scripts/typegen.ts && tsdown",
+    "build": "node scripts/typegen.ts && tsdown",
     "dev": "tsdown --watch",
     "test": "vitest",
     "typecheck": "tsgo --noEmit",
@@ -51,22 +51,21 @@
     "eslint": "^9.0.0 || ^10.0.0"
   },
   "devDependencies": {
-    "@sxzz/eslint-config": "^7.6.1",
-    "@sxzz/prettier-config": "^2.3.1",
-    "@types/node": "^25.2.2",
-    "@typescript-eslint/parser": "^8.54.0",
-    "@typescript-eslint/utils": "^8.54.0",
-    "@typescript/native-preview": "7.0.0-dev.20260209.1",
-    "bumpp": "^10.4.1",
-    "eslint": "^10.0.0",
-    "eslint-typegen": "^2.3.0",
+    "@sxzz/eslint-config": "^8.3.1",
+    "@sxzz/prettier-config": "^2.3.2",
+    "@types/node": "^26.1.1",
+    "@typescript-eslint/parser": "^8.65.0",
+    "@typescript-eslint/utils": "^8.65.0",
+    "@typescript/native-preview": "7.0.0-dev.20260707.2",
+    "bumpp": "^12.0.0",
+    "eslint": "^10.8.0",
+    "eslint-typegen": "^2.3.1",
     "eslint-vitest-rule-tester": "^3.1.0",
-    "prettier": "^3.8.1",
-    "tsdown": "^0.20.3",
-    "tsdown-preset-sxzz": "^0.3.2",
-    "tsx": "^4.21.0",
+    "prettier": "^3.9.6",
+    "tsdown": "^0.22.14",
+    "tsdown-preset-sxzz": "^0.6.0",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.18"
+    "vitest": "^4.1.10"
   },
   "prettier": "@sxzz/prettier-config"
 }
