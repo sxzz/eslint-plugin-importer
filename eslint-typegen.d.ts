@@ -11,42 +11,42 @@ declare module 'eslint' {
 export interface RuleOptions {
   /**
    * Enforce or ban the use of inline type-only markers for named imports.
-   * @see https://github.com/sxzz/eslint-plugin-importer/blob/main/src/rules/consistent-type-specifier-style.test.ts
+   * @see https://github.com/un-ts/eslint-plugin-import-x/tree/master/docs/rules/consistent-type-specifier-style.md
    */
   'import/consistent-type-specifier-style'?: Linter.RuleEntry<ImportConsistentTypeSpecifierStyle>
   /**
    * Ensure all imports appear before other statements.
-   * @see https://github.com/sxzz/eslint-plugin-importer/blob/main/src/rules/first.test.ts
+   * @see https://github.com/un-ts/eslint-plugin-import-x/tree/master/docs/rules/first.md
    */
   'import/first'?: Linter.RuleEntry<ImportFirst>
   /**
    * Enforce a newline after import statements.
-   * @see https://github.com/sxzz/eslint-plugin-importer/blob/main/src/rules/newline-after-import.test.ts
+   * @see https://github.com/un-ts/eslint-plugin-import-x/tree/master/docs/rules/newline-after-import.md
    */
   'import/newline-after-import'?: Linter.RuleEntry<ImportNewlineAfterImport>
   /**
    * Forbid default exports.
-   * @see https://github.com/sxzz/eslint-plugin-importer/blob/main/src/rules/no-default-export.test.ts
+   * @see https://github.com/un-ts/eslint-plugin-import-x/tree/master/docs/rules/no-default-export.md
    */
   'import/no-default-export'?: Linter.RuleEntry<[]>
   /**
    * Forbid repeated import of the same module in multiple places.
-   * @see https://github.com/sxzz/eslint-plugin-importer/blob/main/src/rules/no-duplicates.test.ts
+   * @see https://github.com/un-ts/eslint-plugin-import-x/tree/master/docs/rules/no-duplicates.md
    */
   'import/no-duplicates'?: Linter.RuleEntry<ImportNoDuplicates>
   /**
    * Fix duplication in imports
-   * @see https://github.com/sxzz/eslint-plugin-importer/blob/main/src/rules/import-dedupe.test.ts
+   * @see https://github.com/un-ts/eslint-plugin-import-x/tree/master/docs/rules/import-dedupe.md
    */
   'import/no-duplicates-specifier'?: Linter.RuleEntry<[]>
   /**
    * Forbid the use of mutable exports with `var` or `let`.
-   * @see https://github.com/sxzz/eslint-plugin-importer/blob/main/src/rules/no-mutable-exports.test.ts
+   * @see https://github.com/un-ts/eslint-plugin-import-x/tree/master/docs/rules/no-mutable-exports.md
    */
   'import/no-mutable-exports'?: Linter.RuleEntry<[]>
   /**
    * Forbid named default exports.
-   * @see https://github.com/sxzz/eslint-plugin-importer/blob/main/src/rules/no-named-default.test.ts
+   * @see https://github.com/un-ts/eslint-plugin-import-x/tree/master/docs/rules/no-named-default.md
    */
   'import/no-named-default'?: Linter.RuleEntry<[]>
 }

@@ -7,12 +7,8 @@ import type {
 import type { RuleContext } from '@typescript-eslint/utils/ts-eslint'
 import type { Rule } from 'eslint'
 
-// @keep-sorted
-// eslint-disable-next-line unicorn/no-useless-collection-argument
-const hasDocs = new Set<string>([])
-
 const blobUrl =
-  'https://github.com/sxzz/eslint-plugin-importer/blob/main/src/rules/'
+  'https://github.com/un-ts/eslint-plugin-import-x/tree/master/docs/rules/'
 
 export interface RuleModule<T extends readonly unknown[]>
   extends Rule.RuleModule {
@@ -84,10 +80,8 @@ function createRule<
   }
 }
 
-export const createEslintRule = RuleCreator((ruleName) =>
-  hasDocs.has(ruleName)
-    ? `${blobUrl}${ruleName}.md`
-    : `${blobUrl}${ruleName}.test.ts`,
+export const createEslintRule = RuleCreator(
+  (ruleName) => `${blobUrl}${ruleName}.md`,
 ) as any as <TOptions extends readonly unknown[], TMessageIds extends string>({
   name,
   meta,
